@@ -14,3 +14,10 @@ It may be easier to test if you temporarily also add.
 ```
 Defaults        lecture = always
 ```
+
+## References
+
+Ideas gleaned from these places.
+* sudoers.lecture from [brianclemens](https://github.com/brianclemens/dotfiles/blob/master/sudoers.lecture).
+* A blog post by Craig Hockenberry [The Terminal](http://furbo.org/2014/09/03/the-terminal/)
+* Solarized colours for vim [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized)

@@ -5,7 +5,7 @@ GNU Linux / Mac OS configuration
 
 ### sudoers.lecture
 
-Cutesy message when doing sudo. Thanks to [https://github.com/brianclemens/dotfiles/blob/master/sudoers.lecture](brianclemens/dotfiles).
+Cutesy message when doing sudo. Thanks to [brianclemens/dotfiles](https://github.com/brianclemens/dotfiles/blob/master/sudoers.lecture).
 Save to /etc/sudoers.lecture as root. Check `man sudoers` for support of the following config.
 ```
 Defaults        lecture_file = /etc/sudoers.lecture

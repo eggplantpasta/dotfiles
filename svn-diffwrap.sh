@@ -2,6 +2,9 @@
 #
 # Put this somewhere like ~/bin and make it executable
 # `chmod +x ~/bin/svn-diffwrap.sh`
+# Add the following to the [helpers] section of `~/.subversion/config`.
+# diff-cmd = [full path to homedir]/bin/svn-diffwrap.sh
+#
 
 ##################################################
 ### Configure your favorite diff program here. ###
@@ -9,10 +12,8 @@
 
 # MacVim
 #DIFF="/Users/username/bin/mvim -d"
-
 # Vim
 #DIFF="/usr/bin/vimdiff"
-
 # OS X FileMerge
 DIFF="/usr/bin/opendiff"
 

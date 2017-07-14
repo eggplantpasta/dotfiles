@@ -14,6 +14,8 @@
 #DIFF="/Users/username/bin/mvim -d"
 # Vim
 #DIFF="/usr/bin/vimdiff"
+# Git
+#DIFF="/usr/bin/git diff --color"
 # OS X FileMerge
 DIFF="/usr/bin/opendiff"
 

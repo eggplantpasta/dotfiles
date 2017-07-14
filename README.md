@@ -8,7 +8,7 @@ According to the `man bash`, .bash_profile is executed for login shells, while .
 
 Normally you want to do the same things for both login and non-login shells - so put all of your code in .bashrc and call it from .bash_profile.
 
-The difference between .bashrc and .bash_profile are explained on [Josh Staiger's blog](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html).
+The differences between .bashrc and .bash_profile are explained on [Josh Staiger's blog](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html).
 
 ### sudoers.lecture
 Cutesy lecture message when doing sudo thanks to  [brianclemens](https://github.com/brianclemens/dotfiles/blob/master/sudoers.lecture).
@@ -23,7 +23,12 @@ Defaults        lecture = always
 ```
 
 ### svn-diffwrap.sh
-Wrapper to use the graphical XCode FileMerge when calling `svn diff`.
+Wrapper to use a better diff tool when calling `svn diff`.
+
+For Mac OS use the graphical XCode FileMerge (opendiff).
+For the command line I prefer to use `git diff` wich colourises the normal diff output.
+`vimdiff` gives a coloured side by side comparison if you are comfortable using Vim.
+
 Save in ~/bin and make it executable.
 ```bash
 chmod +x ~/bin/svn-diffwrap.sh

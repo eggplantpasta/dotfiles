@@ -43,3 +43,4 @@ Ideas gleaned from these places.
 * A blog post by Craig Hockenberry [The Terminal](http://furbo.org/2014/09/03/the-terminal/).
 * Solarized colours for vim [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized).
 * Configure SVN diff to use FileMerge from [dtjm](https://gist.github.com/dtjm/523243).
+* Good example of a bash profile from [Nate Landau](https://natelandau.com/my-mac-osx-bash_profile/).

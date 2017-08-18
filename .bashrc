@@ -26,7 +26,7 @@
 #   Change Prompt
 #   ------------------------------------------------------------
     SUCCESSPS1="🤖 ${VIOLET}\w\$ ${DEFAULT}"
-    FAILPS1="👻 ${RED}[\$?]\n\n"
+    FAILPS1="👻 ${RED}[\$?] \n\n${DEFAULT}"
     #export PS1="$( if [[ \$? != 0 ]]; then echo ${FAILPS1}; fi ) ${SUCCESSPS1}"
     export PS1=${SUCCESSPS1}
 

@@ -24,15 +24,17 @@ Defaults        lecture = always
 
 ### .gitconfig
 
-I install Atlassian's [Sourcetree](https://www.sourcetreeapp.com) and this makes changes to the [difftool "sourcetree"] and [mergetool "sourcetree"] entries. In addition to this I add the following to make diff from the command line use the XCode FileMerge utility.
+Atlassian's [Sourcetree](https://www.sourcetreeapp.com) makes changes to the [difftool "sourcetree"] and [mergetool "sourcetree"] entries. In addition to this the following additions make `git difftool` from the command line use the XCode FileMerge utility.
 
 ```
 [diff]
-    tool = opendiff
+        tool = opendiff
 [difftool]
-    prompt = false
+        prompt = false
 [difftool "opendiff"]
-    cmd = /usr/bin/opendiff \"$LOCAL\" \"$REMOTE\" -merge \"$MERGED\" | cat
+        cmd = /usr/bin/opendiff \"$LOCAL\" \"$REMOTE\" -merge \"$MERGED\" | cat
+[mergetool "opendiff"]
+        cmd = /usr/bin/opendiff \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 ```
 
 ### svn-diffwrap.sh

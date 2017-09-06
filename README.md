@@ -1,6 +1,8 @@
 # dotfiles
 GNU Linux / Mac OS configuration
 
+More than just dotfiles.
+
 ## Files
 
 ### .bashrc and .bash_profile
@@ -53,9 +55,23 @@ Add this line to the [helpers] section of `~/.subversion/config`.
 diff-cmd = [full path to homedir]/bin/svn-diffwrap.sh
 ```
 
+## Atom
+
+https://github.com/Glavin001/atom-beautify
+
+https://github.com/andialbrecht/sqlparse
+
+I think the theme [Gloom](https://atom.io/themes/gloom) by hejrobin is pretty.
+
+```
+sudo pip install --upgrade pip
+sudo pip install --upgrade sqlparse
+```
+
 ## References
 Ideas gleaned from these places.
 * A blog post by Craig Hockenberry [The Terminal](http://furbo.org/2014/09/03/the-terminal/).
 * Solarized colours for vim [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized).
 * Configure SVN diff to use FileMerge from [dtjm](https://gist.github.com/dtjm/523243).
 * Good example of a bash profile from [Nate Landau](https://natelandau.com/my-mac-osx-bash_profile/).
+* Paul Redmonds zsh [article](https://laravel-news.com/maximize-terminal-productivity) and [dotfiles](https://github.com/paulredmond/dotfiles).

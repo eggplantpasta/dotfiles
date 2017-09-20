@@ -61,7 +61,7 @@ https://github.com/Glavin001/atom-beautify
 
 https://github.com/andialbrecht/sqlparse
 
-I think the theme [Gloom](https://atom.io/themes/gloom) by hejrobin is pretty.
+I think the syntax theme [Gloom](https://atom.io/themes/gloom) by hejrobin is pretty. I use it together with the UI theme [one dark](https://atom.io/themes/one-dark-atom) by jdsimcoe.
 
 ```
 sudo pip install --upgrade pip

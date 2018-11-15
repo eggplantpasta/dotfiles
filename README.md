@@ -55,6 +55,18 @@ Add this line to the [helpers] section of `~/.subversion/config`.
 diff-cmd = [full path to homedir]/bin/svn-diffwrap.sh
 ```
 
+## Development
+
+## Brew
+
+## Composer
+
+Download from [here](https://getcomposer.org/download/) and install [globally](https://getcomposer.org/doc/00-intro.md#globally).
+
+Keep it updated by running `composer self-update` occasionally.
+
+Keep any global tools updated by running `composer global update`.
+
 ## Atom
 
 https://github.com/Glavin001/atom-beautify

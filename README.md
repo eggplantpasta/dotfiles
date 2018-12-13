@@ -1,7 +1,47 @@
 # dotfiles
-GNU Linux / Mac OS configuration
+GNU Linux / Mac OS configuration.
 
-More than just dotfiles.
+More than just dotfiles. My personal preferences for the command line and the Mac.
+
+## New Mac config
+
+### Brew
+
+Go to the [brew.sh](https://brew.sh) to set up homebrew.
+
+From the FAQ:
+
+How do I update my local packages?
+First update the formulae and Homebrew itself:
+
+```bash
+brew update
+```
+
+You can now find out what is outdated with:
+
+```bash
+brew outdated
+```
+
+Upgrade everything with:
+
+```bash
+brew upgrade
+```
+
+Or upgrade a specific formula with:
+
+```bash
+brew upgrade <formula>
+```
+
+### Terminal
+
+Set up a default terminal profile based on "Homebrew" with the font changed to "Menlo Regular 14 pt."
+
+### Mail
+Set the default mail app by opening Mail, going into preferences, and selecting the default mail app from the dropdown on the General tab.
 
 ## Files
 
@@ -80,8 +120,37 @@ sudo pip install --upgrade pip
 sudo pip install --upgrade sqlparse
 ```
 
+## Visual Studio Code
+
+Download from the [main website](https://code.visualstudio.com/).
+
+Install Settings Sync and fetch the settings from GitHub.
+
+Current Extensions:
+
+* AWK v0.0.2
+* beautify v1.4.7
+* code-settings-sync v3.2.2
+* gitlens v9.0.3
+* markdown-all-in-one v1.8.0
+* Material-theme v2.17.7
+* php-cs-fixer v0.1.89
+* php-debug v1.12.6
+* php-intellisense v2.3.10
+* php-pack v1.0.2
+* plsql-language v1.6.5
+* python v2018.11.0
+* sort-lines v1.7.0
+* vscode-apache v1.1.1
+* vscode-docker v0.4.0
+* vscode-hexdump v1.7.2
+* vscode-markdownlint v0.22.0
+* xml v2.3.2
+
 ## References
+
 Ideas gleaned from these places.
+
 * A blog post by Craig Hockenberry [The Terminal](http://furbo.org/2014/09/03/the-terminal/).
 * Solarized colours for vim [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized).
 * Configure SVN diff to use FileMerge from [dtjm](https://gist.github.com/dtjm/523243).

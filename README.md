@@ -9,31 +9,11 @@ More than just dotfiles. My personal preferences for the command line and the Ma
 
 Go to [brew.sh](https://brew.sh) to set up homebrew.
 
-From the FAQ:
-
-How do I update my local packages?
-First update the formulae and Homebrew itself:
+To upgrade brew itself, the formulae, and then the packages:
 
 ```bash
 brew update
-```
-
-You can now find out what is outdated with:
-
-```bash
-brew outdated
-```
-
-Upgrade everything with:
-
-```bash
 brew upgrade
-```
-
-Or upgrade a specific formula with:
-
-```bash
-brew upgrade <formula>
 ```
 
 ### GNU utilities

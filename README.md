@@ -5,7 +5,11 @@ More than just dotfiles. My personal preferences for the command line and the Ma
 
 ## New Mac config
 
-### Brew
+### Grant Terminal full disk access
+
+To avoid the “Operation not permitted” error you have to [grant the terminal full disk access](https://osxdaily.com/2018/10/09/fix-operation-not-permitted-terminal-error-macos/). In System Preferences / Security & Privacy, in the privacy tab add the Terminal application (/Applications/Utilities/Terminal) to the list of allowed apps.
+
+### Homebrew
 
 Go to [brew.sh](https://brew.sh) to set up homebrew.
 
@@ -44,7 +48,9 @@ The differences between .bashrc and .bash_profile are explained on [Josh Staiger
 
 ### .bash_aliases
 
-Bash alias and function definitions.
+Definitions of useful aliases and functions.
+
+Set up by default to use GNU Utilities installed by brew on Mac OS. If installing in GNU/Linux then delete the 'g' prefixed version and uncomment the standard one.
 
 ### sudoers.lecture
 Cutesy lecture message when doing sudo thanks to  [brianclemens](https://github.com/brianclemens/dotfiles/blob/master/sudoers.lecture).

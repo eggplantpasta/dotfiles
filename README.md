@@ -1,7 +1,57 @@
 # dotfiles
-GNU Linux / Mac OS configuration
+GNU Linux / Mac OS configuration.
 
-More than just dotfiles.
+More than just dotfiles. My personal preferences for the command line and the Mac.
+
+## New Mac config
+
+### Brew
+
+Go to [brew.sh](https://brew.sh) to set up homebrew.
+
+From the FAQ:
+
+How do I update my local packages?
+First update the formulae and Homebrew itself:
+
+```bash
+brew update
+```
+
+You can now find out what is outdated with:
+
+```bash
+brew outdated
+```
+
+Upgrade everything with:
+
+```bash
+brew upgrade
+```
+
+Or upgrade a specific formula with:
+
+```bash
+brew upgrade <formula>
+```
+
+### GNU utilities
+
+The command line tools included with Mac OS are older BSD versions and not the more normal GNU Linux versions. This adds symlinks for GNU utilities with g prefix to /usr/local/bin/:
+
+```bash
+brew install coreutils
+```
+
+See `brew search gnu` for other packages. If you want to use the commands without a 'g' prefix use aliases or add for example /usr/local/opt/coreutils/libexec/gnubin before other directories on your PATH.
+
+### Terminal
+
+Set up a default terminal profile based on "Homebrew" with the font changed to "Menlo Regular 14 pt."
+
+### Mail
+Set the default mail app by opening Mail, going into preferences, and selecting the default mail app from the dropdown on the General tab.
 
 ## Files
 
@@ -12,14 +62,21 @@ Normally you want to do the same things for both login and non-login shells - so
 
 The differences between .bashrc and .bash_profile are explained on [Josh Staiger's blog](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html).
 
+### .bash_aliases
+
+Bash alias and function definitions.
+
 ### sudoers.lecture
 Cutesy lecture message when doing sudo thanks to  [brianclemens](https://github.com/brianclemens/dotfiles/blob/master/sudoers.lecture).
 
 Check `man sudoers` for support of `lecture_file`. Be careful of the hidden ESC characters before the colour definition sequences (use ^v ESC to enter in vi). Save to `/etc/sudoers.lecture` as root. Perform the following config using visudo.
+
 ```
 Defaults        lecture_file = /etc/sudoers.lecture
 ```
+
 It may be easier to test if you temporarily also add.
+
 ```
 Defaults        lecture = always
 ```
@@ -57,7 +114,27 @@ diff-cmd = [full path to homedir]/bin/svn-diffwrap.sh
 
 ## Development
 
-## Brew
+## XCode
+
+Get it from the App Store.
+
+## FileMerge
+
+Following [instructions from here](https://apple.stackexchange.com/questions/42345/where-can-i-download-filemerge-the-app-for-comparing-two-tools-and-merging-the) pull out an alias of FileMerge to enable it's use as a stand alone app.
+
+1. Browse to /Applications/Xcode.app
+2. Right-click -> Show package contents
+3. Contents -> Applications
+4. Right-click FileMerge.app -> Make Alias -> Enter password
+5. Copy the Alias to somewhere, like /Applications
+6. Delete the original Alias
+
+Also [from here](https://stackoverflow.com/questions/32729049/filemerge-quits-immediately-after-launching-from-sourcetree/41490804) set the XCode preference for the command line tools.
+
+1. Open Xcode > Preferences > Locations
+2. Click on the drop-down box beside Command Line Tools and select your current Xcode version.
+
+Check by running `opendiff` on the command line.
 
 ## Composer
 
@@ -80,10 +157,41 @@ sudo pip install --upgrade pip
 sudo pip install --upgrade sqlparse
 ```
 
+## Visual Studio Code
+
+Download from the [main website](https://code.visualstudio.com/).
+
+Install Settings Sync and fetch the settings from GitHub.
+
+Current Extensions:
+
+* AWK v0.0.2
+* beautify v1.4.7
+* code-settings-sync v3.2.2
+* gitlens v9.0.3
+* markdown-all-in-one v1.8.0
+* Material-theme v2.17.7
+* php-cs-fixer v0.1.89
+* php-debug v1.12.6
+* php-intellisense v2.3.10
+* php-pack v1.0.2
+* plsql-language v1.6.5
+* python v2018.11.0
+* sort-lines v1.7.0
+* vscode-apache v1.1.1
+* vscode-docker v0.4.0
+* vscode-hexdump v1.7.2
+* vscode-markdownlint v0.22.0
+* xml v2.3.2
+
 ## References
+
 Ideas gleaned from these places.
+
 * A blog post by Craig Hockenberry [The Terminal](http://furbo.org/2014/09/03/the-terminal/).
 * Solarized colours for vim [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized).
 * Configure SVN diff to use FileMerge from [dtjm](https://gist.github.com/dtjm/523243).
 * Good example of a bash profile from [Nate Landau](https://natelandau.com/my-mac-osx-bash_profile/).
 * Paul Redmonds zsh [article](https://laravel-news.com/maximize-terminal-productivity) and [dotfiles](https://github.com/paulredmond/dotfiles).
+* Another .bashrc example from [Stefaan Lippens](https://www.stefaanlippens.net/my_bashrc_aliases_profile_and_other_stuff/).
+* Explination of the [differences between the .bashrc and others](https://www.stefaanlippens.net/bashrc_and_others/).

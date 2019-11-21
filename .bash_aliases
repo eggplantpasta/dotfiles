@@ -21,5 +21,5 @@ alias grep='grep --color=auto --exclude-dir={\.svn,\.git} --recursive'
 alias du='gdu -h --exclude=/{proc,sys,dev}'
 
 # Search for big files from the root
-# alias dubig='sudo du -a --exclude=/{proc,sys,dev} / | sort -rh | head -n 20'
-alias dubig='sudo gdu -a --exclude=/{proc,sys,dev} / | sort -rh | head -n 20'
+# alias dubig='sudo du -ah --exclude=/{proc,sys,dev} / | sort -rh | head -n 20'
+alias dubig='sudo gdu -ah --exclude=/{proc,sys,dev} / | sort -rh | head -n 20'

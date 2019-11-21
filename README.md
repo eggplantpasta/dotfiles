@@ -37,6 +37,16 @@ Set up a default terminal profile based on "Homebrew" with the font changed to "
 ### Mail
 Set the default mail app by opening Mail, going into preferences, and selecting the default mail app from the dropdown on the General tab.
 
+### Screenshots
+
+Send screenshots to a folder so the desktop stays uncluttered.
+
+```bash
+mkdir ~/Documents/Screenshots
+cd ~/Desktop/Screenshots
+defaults write com.apple.screencapture location `pwd`
+```
+
 ## Files
 
 ### .bashrc and .bash_profile

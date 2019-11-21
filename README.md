@@ -1,4 +1,5 @@
 # dotfiles
+
 GNU Linux / Mac OS configuration.
 
 More than just dotfiles. My personal preferences for the command line and the Mac.
@@ -35,6 +36,7 @@ See `brew search gnu` for other packages. If you want to use the commands withou
 Set up a default terminal profile based on "Homebrew" with the font changed to "Menlo Regular 14 pt."
 
 ### Mail
+
 Set the default mail app by opening Mail, going into preferences, and selecting the default mail app from the dropdown on the General tab.
 
 ### Screenshots
@@ -50,6 +52,7 @@ defaults write com.apple.screencapture location `pwd`
 ## Files
 
 ### .bashrc and .bash_profile
+
 According to the `man bash`, .bash_profile is executed for login shells, while .bashrc is executed for interactive non-login shells. An exception to this is Mac OS X’s Terminal.app, which runs a login shell by default for each new terminal window, calling .bash_profile instead of .bashrc.
 
 Normally you want to do the same things for both login and non-login shells - so put all of your code in .bashrc and call it from .bash_profile.
@@ -63,17 +66,18 @@ Definitions of useful aliases and functions.
 Set up by default to use GNU Utilities installed by brew on Mac OS. If installing in GNU/Linux then delete the 'g' prefixed version and uncomment the standard one.
 
 ### sudoers.lecture
+
 Cutesy lecture message when doing sudo thanks to  [brianclemens](https://github.com/brianclemens/dotfiles/blob/master/sudoers.lecture).
 
 Check `man sudoers` for support of `lecture_file`. Be careful of the hidden ESC characters before the colour definition sequences (use ^v ESC to enter in vi). Save to `/etc/sudoers.lecture` as root. Perform the following config using visudo.
 
-```
+```conf
 Defaults        lecture_file = /etc/sudoers.lecture
 ```
 
 It may be easier to test if you temporarily also add.
 
-```
+```conf
 Defaults        lecture = always
 ```
 
@@ -81,7 +85,7 @@ Defaults        lecture = always
 
 Atlassian's [Sourcetree](https://www.sourcetreeapp.com) makes changes to the [difftool "sourcetree"] and [mergetool "sourcetree"] entries. In addition to this the following additions make `git difftool` from the command line use the XCode FileMerge utility. Here's a [cool article](https://laravel-news.com/resolving-git-conflicts?utm_medium=email&utm_campaign=The%20latest%20on%20Laravel%2055%20-%20%20169&utm_content=The%20latest%20on%20Laravel%2055%20-%20%20169+CID_6131fb910630e7f339f60ddfa08bb905&utm_source=email%20marketing&utm_term=Watch%20Now) and video tutorial about it.
 
-```
+```conf
 [diff]
         tool = opendiff
 [difftool]
@@ -90,22 +94,6 @@ Atlassian's [Sourcetree](https://www.sourcetreeapp.com) makes changes to the [di
         cmd = /usr/bin/opendiff \"$LOCAL\" \"$REMOTE\" -merge \"$MERGED\" | cat
 [mergetool "opendiff"]
         cmd = /usr/bin/opendiff \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-```
-
-### svn-diffwrap.sh
-Wrapper to use a better diff tool when calling `svn diff`.
-
-For Mac OS use the graphical XCode FileMerge (opendiff).
-For the command line I prefer to use `git diff` wich colourises the normal diff output.
-`vimdiff` gives a coloured side by side comparison if you are comfortable using Vim.
-
-Save in ~/bin and make it executable.
-```bash
-chmod +x ~/bin/svn-diffwrap.sh
-```
-Add this line to the [helpers] section of `~/.subversion/config`.
-```
-diff-cmd = [full path to homedir]/bin/svn-diffwrap.sh
 ```
 
 ## Development
@@ -140,22 +128,11 @@ Keep it updated by running `composer self-update` occasionally.
 
 Keep any global tools updated by running `composer global update`.
 
-## Atom
-
-https://github.com/Glavin001/atom-beautify
-
-https://github.com/andialbrecht/sqlparse
-
-I think the syntax theme [Gloom](https://atom.io/themes/gloom) by hejrobin is pretty. I use it together with the UI theme [one dark](https://atom.io/themes/one-dark-atom) by jdsimcoe.
-
-```
-sudo pip install --upgrade pip
-sudo pip install --upgrade sqlparse
-```
-
 ## Visual Studio Code
 
 Download from the [main website](https://code.visualstudio.com/).
+
+I think the colour theme gloom is pretty. I use it together with the UI theme One Dark Pro.
 
 Install Settings Sync and fetch the settings from GitHub.
 

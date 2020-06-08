@@ -2,9 +2,9 @@
 
 GNU Linux / Mac OS configuration.
 
-More than just dotfiles. My personal preferences for the command line and the Mac.
+More than just dotfiles. My personal preferences for the command line, Mac OS and Raspbian.
 
-## New Mac config
+## New Mac OS config
 
 ### Grant Terminal full disk access
 
@@ -157,6 +157,42 @@ Current Extensions:
 * vscode-markdownlint v0.22.0
 * xml v2.3.2
 
+## New Raspbian config
+
+### Keeping it updated
+
+Following instructions [here](https://www.raspberrypi.org/documentation/raspbian/updating.md); to upgrade the installed packages, kernel, and firmware.
+
+```bash
+sudo apt update
+sudo apt full-upgrade
+```
+
+### Install VS Codebuild for ARM
+
+ARM bulds of the open source version of VS Code are available at [Headmelted](https://code.headmelted.com/).
+
+First add the public key.
+
+```bash
+cd /tmp
+wget https://packagecloud.io/headmelted/codebuilds/gpgkey
+sudo apt-key add - < gpgkey
+```
+
+Then download it viat the commands found on the [packagecloud.io website](https://packagecloud.io/headmelted/codebuilds/install).
+
+```bash
+curl -s https://packagecloud.io/install/repositories/headmelted/codebuilds/script.deb.sh | sudo bash
+```
+
+### Git config
+
+```bash
+git config --global user.email "roper.brett@gmail.com"
+git config --global user.name "Brett Roper"
+```
+
 ## References
 
 Ideas gleaned from these places.
@@ -168,3 +204,5 @@ Ideas gleaned from these places.
 * Paul Redmonds zsh [article](https://laravel-news.com/maximize-terminal-productivity) and [dotfiles](https://github.com/paulredmond/dotfiles).
 * Another .bashrc example from [Stefaan Lippens](https://www.stefaanlippens.net/my_bashrc_aliases_profile_and_other_stuff/).
 * Explination of the [differences between the .bashrc and others](https://www.stefaanlippens.net/bashrc_and_others/).
+* VS Code for Linux from [headmelted](https://code.headmelted.com/).
+

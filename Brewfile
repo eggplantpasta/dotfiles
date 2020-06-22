@@ -1,0 +1,11 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+brew "azure-cli"
+brew "checkbashisms"
+brew "composer"
+brew "coreutils"
+brew "git"
+brew "node"
+brew "php", restart_service: true

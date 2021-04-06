@@ -138,6 +138,15 @@ Keep any global tools updated by running `composer global update`.
 
 Download from the [main website](https://code.visualstudio.com/).
 
+Install it in your path (zsh)
+
+```bash
+cat << EOF >> ~/.zprofile
+# Add Visual Studio Code (code)
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+EOF
+```
+
 I think the colour theme gloom is pretty. I use it together with the UI theme One Dark Pro.
 
 Install Settings Sync and fetch the settings from GitHub.

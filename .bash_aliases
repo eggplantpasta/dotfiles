@@ -23,3 +23,7 @@ alias du='gdu -h --exclude=/{proc,sys,dev}'
 # Search for big files from the root
 # alias dubig='sudo du -ah --exclude=/{proc,sys,dev} / | sort -rh | head -n 20'
 alias dubig='sudo gdu -ah --exclude=/{proc,sys,dev} / | sort -rh | head -n 20'
+
+# https://serverfault.com/questions/139343/command-line-tools-to-analyze-apache-log-files
+# usage: cat apahe-logs | apacheawk '$6 ~ /200/ { print $5 } | sort | uniq
+alias apacheawk="gawk -vFPAT='([^ ]+)|(\"[^\"]+\")|(\\\\[[^\\\\]]+\\\\])' "

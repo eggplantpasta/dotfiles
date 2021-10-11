@@ -170,20 +170,11 @@ sudo apt full-upgrade
 
 ### Install VS Codebuild for ARM
 
-ARM bulds of the open source version of VS Code are available at [Headmelted](https://code.headmelted.com/).
-
-First add the public key.
+VS Code is now [officially supportedd on Raspberry Pi](https://code.visualstudio.com/docs/setup/raspberry-pi).
 
 ```bash
-cd /tmp
-wget https://packagecloud.io/headmelted/codebuilds/gpgkey
-sudo apt-key add - < gpgkey
-```
-
-Then download it viat the commands found on the [packagecloud.io website](https://packagecloud.io/headmelted/codebuilds/install).
-
-```bash
-curl -s https://packagecloud.io/install/repositories/headmelted/codebuilds/script.deb.sh | sudo bash
+sudo apt update
+sudo apt install code
 ```
 
 ### Git config

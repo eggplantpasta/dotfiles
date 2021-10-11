@@ -25,5 +25,6 @@ alias du='gdu -h --exclude=/{proc,sys,dev}'
 alias dubig='sudo gdu -ah --exclude=/{proc,sys,dev} / | sort -rh | head -n 20'
 
 # https://serverfault.com/questions/139343/command-line-tools-to-analyze-apache-log-files
-# usage: cat apahe-logs | apacheawk '$6 ~ /200/ { print $5 } | sort | uniq
+# usage example: cat apache-logs | apacheawk '$6 ~ /200/ { print $5 } | sort | uniq
+# usage example: cat apache-logs | apacheawk '$6 ~ /200/ { split($5, subfield, "/"); print subfield[2] }' | sort | uniq -c > apache-logs-unique
 alias apacheawk="gawk -vFPAT='([^ ]+)|(\"[^\"]+\")|(\\\\[[^\\\\]]+\\\\])' "

@@ -6,6 +6,12 @@ More than just dotfiles. My personal preferences for the command line, Mac OS an
 
 ## New Mac OS config
 
+### ZSH, Oh My ZSH, and iTerm2
+
+For the moment roughly following [this tutorial](https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/).
+
+I chose the [iTerm2 Colour scheme](https://iterm2colorschemes.com) "[purplepeter](https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/purplepeter.itermcolors)".
+
 ### Grant Terminal full disk access
 
 To avoid the “Operation not permitted” error you have to [grant the terminal full disk access](https://osxdaily.com/2018/10/09/fix-operation-not-permitted-terminal-error-macos/). In System Preferences / Security & Privacy, in the privacy tab add the Terminal application (/Applications/Utilities/Terminal) to the list of allowed apps.
@@ -132,6 +138,15 @@ Keep any global tools updated by running `composer global update`.
 
 Download from the [main website](https://code.visualstudio.com/).
 
+Install it in your path (zsh)
+
+```bash
+cat << EOF >> ~/.zprofile
+# Add Visual Studio Code (code)
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+EOF
+```
+
 I think the colour theme gloom is pretty. I use it together with the UI theme One Dark Pro.
 
 Install Settings Sync and fetch the settings from GitHub.
@@ -168,6 +183,21 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
+### Colours for ls
+
+Colours for the ls command are implemented in a couple of ways depending on the flavour of Linux. This is explained in the
+[StackOverflow post here](https://unix.stackexchange.com/questions/2897/clicolor-and-ls-colors-in-bash).
+
+BSD / Mac OS use the CLICOLOR=1 environmentvariable to turn on colour and the LSCOLOR variable to set the colours.
+
+GNU Linux uses the command line switch --color and the envirnment variable LS_COLOR to set the colours. Use an alias to turn colours on on a permanent basis.
+
+```bash
+alias ls='ls --color'
+```
+
+Rather than setting the colours using LS_COLOR or LSCOLOR it's better to change the definition of those colours in the terminal as that will be portable across every machine you ssh into.
+
 ### Install VS Codebuild for ARM
 
 VS Code is now [officially supportedd on Raspberry Pi](https://code.visualstudio.com/docs/setup/raspberry-pi).
@@ -196,4 +226,3 @@ Ideas gleaned from these places.
 * Another .bashrc example from [Stefaan Lippens](https://www.stefaanlippens.net/my_bashrc_aliases_profile_and_other_stuff/).
 * Explination of the [differences between the .bashrc and others](https://www.stefaanlippens.net/bashrc_and_others/).
 * VS Code for Linux from [headmelted](https://code.headmelted.com/).
-

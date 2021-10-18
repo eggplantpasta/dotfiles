@@ -28,3 +28,6 @@ alias dubig='sudo gdu -ah --exclude=/{proc,sys,dev} / | sort -rh | head -n 20'
 # usage example: cat apache-logs | apacheawk '$6 ~ /200/ { print $5 } | sort | uniq
 # usage example: cat apache-logs | apacheawk '$6 ~ /200/ { split($5, subfield, "/"); print subfield[2] }' | sort | uniq -c > apache-logs-unique
 alias apacheawk="gawk -vFPAT='([^ ]+)|(\"[^\"]+\")|(\\\\[[^\\\\]]+\\\\])' "
+
+ # display ssh aliases
+ alias sshalias='cat ~/.ssh/config | awk '/Host /{$1 = ""; print $0}'

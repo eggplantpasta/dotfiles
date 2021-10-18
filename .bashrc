@@ -69,7 +69,7 @@ if type brew &>/dev/null; then
   fi
 fi
 
-# Add bash aliases.
-if [ -f ~/.bash_aliases ]; then
-    source ~/.bash_aliases
+# Add aliases.
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
 fi

@@ -30,4 +30,4 @@ alias dubig='sudo gdu -ah --exclude=/{proc,sys,dev} / | sort -rh | head -n 20'
 alias apacheawk="gawk -vFPAT='([^ ]+)|(\"[^\"]+\")|(\\\\[[^\\\\]]+\\\\])' "
 
  # display ssh aliases
- alias sshalias='cat ~/.ssh/config | awk '/Host /{$1 = ""; print $0}'
+ alias sshalias="cat ~/.ssh/config | awk '/Host /{\$1 = \"\"; print \$0}'"

@@ -12,6 +12,24 @@ For the moment roughly following [this tutorial](https://www.freecodecamp.org/ne
 
 I chose the [iTerm2 Colour scheme](https://iterm2colorschemes.com) "[purplepeter](https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/purplepeter.itermcolors)".
 
+### Vim
+
+These are what I install to customise my Vim.
+
+[Vim Plug](https://github.com/junegunn/vim-plug) - A minimalist Vim plugin manager.
+
+[Sensible.Vim](https://github.com/tpope/vim-sensible) - A small sensible Vim configuration.
+
+[Vim Airline](https://github.com/vim-airline/vim-airline) - Lean & mean status/tabline for vim that's light as air.
+
+```vimrc
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+```
+
 ### Grant Terminal full disk access
 
 To avoid the “Operation not permitted” error you have to [grant the terminal full disk access](https://osxdaily.com/2018/10/09/fix-operation-not-permitted-terminal-error-macos/). In System Preferences / Security & Privacy, in the privacy tab add the Terminal application (/Applications/Utilities/Terminal) to the list of allowed apps.

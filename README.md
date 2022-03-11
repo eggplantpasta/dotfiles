@@ -1,15 +1,61 @@
-# dotfiles
+# Dotfiles
 
-GNU Linux / Mac OS configuration.
+More than just [dotfiles](http://dotfiles.github.io/). My personal preferences for setting up Linux, Mac, and Raspberry Pi.
 
-More than just dotfiles. My personal preferences for the command line, Mac OS and Raspbian.
+## Usage
 
-## Management of these files using GNU Stow
+Install prerequisite software using one of the guides below [for Raspberry Pi](#new-raspberry-pi-config) or [Mac](#new-mac-config).
 
-Based on this article here "[Using GNU Stow to manage your dotfiles](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html)" I've aranged the dotfiles in subdirectories for use with [stow](https://www.gnu.org/software/stow/).
-## New Mac OS config
+Pull the repository, and then create the symbolic links [using GNU stow](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html).
 
-### ZSH, Oh My ZSH, and iTerm2
+```shell
+$ git clone git@github.com:eggplantpasta/dotfiles.git ~/.dotfiles
+$ cd ~/.dotfiles
+$ stow zsh vim git # plus whatever else you'd like
+```
+
+## Software choices
+
+### ZSH, Oh My ZSH
+
+## New Raspberry Pi config
+
+### Keeping it updated
+
+Following instructions [here](https://www.raspberrypi.org/documentation/raspbian/updating.md); to upgrade the installed packages, kernel, and firmware.
+
+```shell
+sudo apt update
+sudo apt full-upgrade
+```
+
+### Install software
+
+
+### Configure stuff
+
+On Raspberry Pi set the default editor to Vim by running `select-editor`.
+
+
+
+## New Mac config
+
+### Grant Terminal full disk access
+
+To avoid the “Operation not permitted” error you have to [grant the terminal full disk access](https://osxdaily.com/2018/10/09/fix-operation-not-permitted-terminal-error-macos/). In System Preferences / Security & Privacy, in the privacy tab add the Terminal application (/Applications/Utilities/Terminal) to the list of allowed apps.
+
+### Homebrew
+
+Go to [brew.sh](https://brew.sh) to set up homebrew.
+
+To upgrade brew itself, the formulae, and then the packages:
+
+```bash
+brew update
+brew upgrade
+```
+
+### iTerm2
 
 For the moment roughly following [this tutorial](https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/).
 
@@ -33,20 +79,7 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 ```
 
-### Grant Terminal full disk access
 
-To avoid the “Operation not permitted” error you have to [grant the terminal full disk access](https://osxdaily.com/2018/10/09/fix-operation-not-permitted-terminal-error-macos/). In System Preferences / Security & Privacy, in the privacy tab add the Terminal application (/Applications/Utilities/Terminal) to the list of allowed apps.
-
-### Homebrew
-
-Go to [brew.sh](https://brew.sh) to set up homebrew.
-
-To upgrade brew itself, the formulae, and then the packages:
-
-```bash
-brew update
-brew upgrade
-```
 
 ### GNU utilities
 
@@ -193,16 +226,6 @@ Current Extensions:
 * vscode-markdownlint v0.22.0
 * xml v2.3.2
 
-## New Raspbian config
-
-### Keeping it updated
-
-Following instructions [here](https://www.raspberrypi.org/documentation/raspbian/updating.md); to upgrade the installed packages, kernel, and firmware.
-
-```bash
-sudo apt update
-sudo apt full-upgrade
-```
 
 ### Colours for ls
 

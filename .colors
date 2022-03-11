@@ -1,0 +1,22 @@
+#   Define Colours ANSI 256 chosen to be close to solarised
+#   ------------------------------------------------------------
+#   SOLARIZED  HEX      XTERM/HEX
+#   ---------  -------  -----------
+#   yellow     #b58900  136 #af8700
+#   orange     #cb4b16  166 #d75f00
+#   red        #dc322f  160 #d70000
+#   magenta    #d33682  125 #af005f
+#   violet     #6c71c4  61 #5f5faf
+#   blue       #268bd2  33 #0087ff
+#   cyan       #2aa198  37 #00afaf
+#   green      #859900  64 #5f8700
+
+# export variables to encapsulate escape codes
+export VIOLET="\[\033[38;5;61;48;5;0m\]"
+
+#   Better ls Colours (Solarized)
+#   ------------------------------------------------------------
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+
+#   Note: Solarised vim implemented in .vim/colors and .vimrc
+#   ------------------------------------------------------------

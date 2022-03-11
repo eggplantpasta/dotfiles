@@ -4,6 +4,9 @@ GNU Linux / Mac OS configuration.
 
 More than just dotfiles. My personal preferences for the command line, Mac OS and Raspbian.
 
+## Management of these files using GNU Stow
+
+Based on this article here "[Using GNU Stow to manage your dotfiles](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html)" I've aranged the dotfiles in subdirectories for use with [stow](https://www.gnu.org/software/stow/).
 ## New Mac OS config
 
 ### ZSH, Oh My ZSH, and iTerm2
@@ -244,3 +247,4 @@ Ideas gleaned from these places.
 * Another .bashrc example from [Stefaan Lippens](https://www.stefaanlippens.net/my_bashrc_aliases_profile_and_other_stuff/).
 * Explination of the [differences between the .bashrc and others](https://www.stefaanlippens.net/bashrc_and_others/).
 * VS Code for Linux from [headmelted](https://code.headmelted.com/).
+* [Using GNU Stow to manage your dotfiles](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html)

@@ -1,0 +1,10 @@
+[user]
+	name = Brett Roper
+	email = roper.brett@gmail.com
+[core]
+	excludesfile = /Users/bsroper/.gitignore_global
+	eol = lf
+	autocrlf = input
+[init]
+	templatedir = ~/.git-templates
+	defaultBranch = main

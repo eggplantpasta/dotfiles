@@ -18,9 +18,15 @@ $ stow zsh vim git # plus whatever else you'd like
 
 ### ZSH, Oh My ZSH
 
+### Colours
+
+Not sure what I'm going to use this for yet but it seems useful: [solarized-termcolor-osc4](https://github.com/benley/solarized-termcolor-osc4).
+
+
+
 ## New Raspberry Pi config
 
-### Keeping it updated
+### Install software
 
 Following instructions [here](https://www.raspberrypi.org/documentation/raspbian/updating.md); to upgrade the installed packages, kernel, and firmware.
 
@@ -29,12 +35,19 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-### Install software
+Install my preferred software.
 
+```shell
+
+# uninstally the tiny vim and install a more full featured version
+
+```
 
 ### Configure stuff
 
 On Raspberry Pi set the default editor to Vim by running `select-editor`.
+
+Set the defaiult terminal app [LXTerminal](https://github.com/lxde/lxterminal) Palette to Solarized Dark by going to Edit / Preferences.
 
 
 

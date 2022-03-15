@@ -33,14 +33,18 @@ Following instructions [here](https://www.raspberrypi.org/documentation/raspbian
 ```shell
 sudo apt update
 sudo apt full-upgrade
+sudo apt autoremove
 ```
 
 Install my preferred software.
 
 ```shell
-
 # uninstally the tiny vim and install a more full featured version
+sudo apt-get remove -y --purge vim vim-runtime vim-gnome vim-tiny vim-gui-common
+sudo apt-get install vim fonts-powerline
 
+# intall other things
+sudo apt-get install xscreensaver stow 
 ```
 
 ### Configure stuff
@@ -48,8 +52,6 @@ Install my preferred software.
 On Raspberry Pi set the default editor to Vim by running `select-editor`.
 
 Set the defaiult terminal app [LXTerminal](https://github.com/lxde/lxterminal) Palette to Solarized Dark by going to Edit / Preferences.
-
-
 
 ## New Mac config
 

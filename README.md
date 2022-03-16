@@ -18,6 +18,10 @@ $ stow zsh vim git # plus whatever else you'd like
 
 ### ZSH, Oh My ZSH
 
+### Kitty 
+
+[Kitty](https://sw.kovidgoyal.net/kitty/) is a fast, feature-rich, GPU based terminal emulator. It has good shell integration and is cross platform between Linux and MacOS.
+
 ### Colours
 
 Not sure what I'm going to use this for yet but it seems useful: [solarized-termcolor-osc4](https://github.com/benley/solarized-termcolor-osc4).

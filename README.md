@@ -26,7 +26,7 @@ $ stow zsh vim git # plus whatever else you'd like
 
 Not sure what I'm going to use this for yet but it seems useful: [solarized-termcolor-osc4](https://github.com/benley/solarized-termcolor-osc4).
 
-
+Or this [Solarized Color Theme for GNU ls (as setup by GNU dircolors)](https://github.com/seebi/dircolors-solarized/blob/master/dircolors.ansi-universal)
 
 ## New Raspberry Pi config
 

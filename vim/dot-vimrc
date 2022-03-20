@@ -20,3 +20,10 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 
+" TAB settings
+set expandtab        
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
+au FileType Makefile set noexpandtab
+au FileType snippet set noexpandtab

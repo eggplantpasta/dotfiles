@@ -57,6 +57,21 @@ On Raspberry Pi set the default editor to Vim by running `select-editor`.
 
 Set the defaiult terminal app [LXTerminal](https://github.com/lxde/lxterminal) Palette to Solarized Dark by going to Edit / Preferences.
 
+Set the scrolling to match the Mac by [editing the libinput config](https://raspberrypi.stackexchange.com/questions/75440/how-to-invert-scrolling-direction-on-trackpaOption%20%22NaturalScrolling%22%20%22true%22d-in-raspbian-stretch).
+
+```shell
+sudo vi /usr/share/X11/xorg.conf.d/40-libinput.conf
+...
+# Match on all types of devices but tablet devices and joysticks
+Section "InputClass"
+        Identifier "libinput pointer catchall"
+        MatchIsPointer "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+        Option "NaturalScrolling" "true" #ADD THIS LINE
+EndSection
+```
+
 ## New Mac config
 
 ### Grant Terminal full disk access

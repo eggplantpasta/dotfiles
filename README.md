@@ -11,7 +11,7 @@ Pull the repository, and then create the symbolic links [using GNU stow](http://
 ```shell
 $ git clone git@github.com:eggplantpasta/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
-$ stow zsh vim git # plus whatever else you'd like
+$ stow --dotfiles zsh vim git # plus whatever else you'd like
 ```
 
 ## Software choices

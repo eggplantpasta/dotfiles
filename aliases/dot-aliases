@@ -1,6 +1,7 @@
 # Definitions of useful aliases and functions.
-# Set up by default to use GNU Utilities installed by brew on Mac OS.
-# If installing in GNU/Linux then delete the 'g' prefixed version and uncomment the standard one.
+# If installed will use brew GNU Utilities on Mac OS.
+# as a prerequisite install the GNU tools with the following brew command: 
+#   brew install coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep"
 
 # Make some possibly destructive commands more interactive.
 alias rm='rm -i'
@@ -17,20 +18,28 @@ alias ls='ls -F'
 alias grep='grep --color=auto --exclude-dir={\.svn,\.git} --recursive'
 
 # skip virtual file systems, human readable output
-# alias du='du -h --exclude=/{proc,sys,dev}'
-alias du='gdu -h --exclude=/{proc,sys,dev}'
-
+alias du='du -h --exclude=/{proc,sys,dev}'
 # Search for big files from the root
-# alias dubig='sudo du -ah --exclude=/{proc,sys,dev} / | sort -rh | head -n 20'
-alias dubig='sudo gdu -ah --exclude=/{proc,sys,dev} / | sort -rh | head -n 20'
+alias dubig='sudo du -ah --exclude=/{proc,sys,dev} / | sort -rh | head -n 20'
+if command -v gdu &> /dev/null
+then
+    alias du='gdu -h --exclude=/{proc,sys,dev}'
+    alias dubig='sudo gdu -ah --exclude=/{proc,sys,dev} / | sort -rh | head -n 20'
+fi
 
 # https://serverfault.com/questions/139343/command-line-tools-to-analyze-apache-log-files
 # usage example: cat apache-logs | apacheawk '$6 ~ /200/ { print $5 } | sort | uniq
 # usage example: cat apache-logs | apacheawk '$6 ~ /200/ { split($5, subfield, "/"); print subfield[2] }' | sort | uniq -c > apache-logs-unique
-alias apacheawk="gawk -vFPAT='([^ ]+)|(\"[^\"]+\")|(\\\\[[^\\\\]]+\\\\])' "
+alias apacheawk="awk -vFPAT='([^ ]+)|(\"[^\"]+\")|(\\\\[[^\\\\]]+\\\\])' "
+if command -v gdu &> /dev/null
+then
+    alias apacheawk="gawk -vFPAT='([^ ]+)|(\"[^\"]+\")|(\\\\[[^\\\\]]+\\\\])' "
+fi
 
 # display ssh aliases
 alias sshalias="cat ~/.ssh/config | awk '/Host /{\$1 = \"\"; print \$0}'"
 
 # enable stow's special handling for "dotfiles" by default
 alias stow="stow --dotfiles"
+
+

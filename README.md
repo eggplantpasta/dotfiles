@@ -192,6 +192,10 @@ Atlassian's [Sourcetree](https://www.sourcetreeapp.com) makes changes to the [di
 
 ## Development
 
+## Shell scripts
+
+Use the Google [Shell Style Guide](https://google.github.io/styleguide/shellguide.html).
+
 ## XCode
 
 Get it from the App Store.

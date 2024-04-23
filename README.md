@@ -30,17 +30,63 @@ Or this [Solarized Color Theme for GNU ls (as setup by GNU dircolors)](https://g
 
 ## New Raspberry Pi config
 
-### Install software
+### Update OS
 
-Following instructions [here](https://www.raspberrypi.org/documentation/raspbian/updating.md); to upgrade the installed packages, kernel, and firmware.
+Upgrade the installed packages, kernel, and firmware.
 
 ```shell
 sudo apt update
-sudo apt full-upgrade
-sudo apt autoremove
+sudo apt upgrade -y
+```
+
+Switch to zsh.
+
+```sh
+sudo apt-get install zsh
+chsh -s /bin/zsh
+```
+
+Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh).
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Install theme Powerlevel10k and replace the line begining with `ZSH_THEME=...` with `ZSH_THEME="powerlevel10k/powerlevel10k"` in ~/.zshrc.
+
+```sh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+vi .~.zshrc
+```
+
+
+### Customise terminal
+
+Using the standard terminal, LXTerminal, terminal emulator for LXDE project:
+
+* change the colours - Edit / Preferences Pallette: Solarised Dark
+
+* Install the font [Fira Code](https://github.com/tonsky/FiraCode) patched with [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts/) from GitHub [here](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip). 
+
+```bash
+mkdir ~/.fonts && cd "$_"
+curl https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
+tar -xf FiraCode.zip
+fc-cache -f
+fc-list
+```
+
+
+
+* Powerline and Gitstatus
+
+```bash
+sudo apt install powerline-gitstatus
 ```
 
 Install my preferred software.
+
+
 
 ```shell
 # uninstally the tiny vim and install a more full featured version

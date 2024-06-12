@@ -151,15 +151,29 @@ These are what I install to customise my Vim.
 
 [Vim Airline](https://github.com/vim-airline/vim-airline) - Lean & mean status/tabline for vim that's light as air.
 
+Put the following in the `~/.vimrc`.
+
 ```vimrc
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+let g:airline_theme = 'base16_solarized'
+let g:airline_powerline_fonts = 1
 ```
-
-
 
 ### GNU utilities
 

@@ -35,15 +35,13 @@ Or this [Solarized Color Theme for GNU ls (as setup by GNU dircolors)](https://g
 Upgrade the installed packages, kernel, and firmware.
 
 ```shell
-sudo apt update
-sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 ```
 
 Switch to zsh.
 
 ```sh
-sudo apt-get install zsh
-chsh -s /bin/zsh
+sudo apt-get install zsh -y && chsh -s /bin/zsh
 ```
 
 Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh).
@@ -70,8 +68,8 @@ Using the standard terminal, LXTerminal, terminal emulator for LXDE project:
 
 ```bash
 mkdir ~/.fonts && cd "$_"
-curl https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
-tar -xf FiraCode.zip
+curl https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FiraCode.zip
+unzip FiraCode.zip
 fc-cache -f
 fc-list
 ```
@@ -81,7 +79,7 @@ fc-list
 * Powerline and Gitstatus
 
 ```bash
-sudo apt install powerline-gitstatus
+sudo apt install powerline-gitstatus -y
 ```
 
 Install my preferred software.
@@ -93,11 +91,19 @@ Install my preferred software.
 sudo apt-get remove -y --purge vim vim-runtime vim-gnome vim-tiny vim-gui-common
 sudo apt-get install vim fonts-powerline
 
+# install vscode
+sudo apt-get install code -y
+
 # intall other things
 sudo apt-get install xscreensaver stow 
 ```
 
 ### Configure stuff
+
+```bash
+git config --global user.name "Brett Roper"
+git config --global user.email "roper.brett@gmail.com"
+```
 
 On Raspberry Pi set the default editor to Vim by running `select-editor`.
 

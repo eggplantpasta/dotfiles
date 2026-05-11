@@ -1,6 +1,8 @@
 # Dotfiles
 
-More than just [dotfiles](http://dotfiles.github.io/). My personal preferences for setting up Linux, Mac, and Raspberry Pi.
+More than just [dotfiles](http://dotfiles.github.io/). 
+
+My personal preferences for setting up Linux, Mac, and Windows to have a similar command line look and basic tools, whilst still using as much out of box or first party tools as possible.
 
 ## Usage
 
@@ -16,11 +18,11 @@ $ stow --dotfiles zsh vim git # plus whatever else you'd like
 
 ## Software choices
 
-### ZSH, Oh My ZSH
-
-### Kitty 
-
-[Kitty](https://sw.kovidgoyal.net/kitty/) is a fast, feature-rich, GPU based terminal emulator. It has good shell integration and is cross platform between Linux and MacOS.
+| OS | Terminal | Shell | Prompt |
+| --- | --- | --- | --- |
+| macOS | Terminal (default) | Zsh (default) + [Oh My Zsh](https://ohmyz.sh/) | [Starship](https://starship.rs/) + [Fira Code Nerd Fonts](https://www.nerdfonts.com/) |
+| Ubuntu | Gnome Terminal (default) | Zsh + [Oh My Zsh](https://ohmyz.sh/) | [Starship](https://starship.rs/) + [Fira Code Nerd Fonts](https://www.nerdfonts.com/) |
+| Windows | [Windows Terminal](https://github.com/microsoft/terminal) | [PowerShell 7](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.6) - [Windows Terminal](https://github.com/microsoft/terminal) | [Starship](https://starship.rs/) + [Fira Code Nerd Fonts](https://www.nerdfonts.com/) |
 
 ### Colours
 
